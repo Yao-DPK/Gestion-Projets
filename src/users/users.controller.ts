@@ -4,7 +4,8 @@ import { UsersService } from './users.service';
 import { UserInput } from './users.input';
 import { ApiTags, ApiOperation, ApiResponse } from '@nestjs/swagger';
 import * as bcrypt from 'bcrypt';
-import { AuthGuard } from '@nestjs/passport';
+import { AuthGuard } from '../auth/auth.guard';
+
 //import { RoleService } from 'src/role/role.service';
 
 @ApiTags('users')
@@ -12,7 +13,7 @@ import { AuthGuard } from '@nestjs/passport';
 export class UsersController {
   constructor(private service: UsersService/*, private rolesService: RoleService*/) {}
 
-  @UseGuards(AuthGuard('jwt'))
+  //@UseGuards(AuthGuard)
   @Get()
   @ApiOperation({ summary: 'Get all users', description: 'Retrieve a list of all users.' })
   @ApiResponse({ status: 200, description: 'Successfully retrieved users.', type: User, isArray: true })

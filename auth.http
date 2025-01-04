@@ -1,0 +1,13 @@
+POST  http://localhost:3000/auth-v2/login
+content-type: application/json
+
+{
+  "email": "jonhdoe@gmail.com",
+  "password": "john123"
+}
+
+
+###
+
+GET http://localhost:3000/auth-v2/profile
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOjEsImVtYWlsIjoiam9uaGRvZUBnbWFpbC5jb20iLCJuYW1lIjoiSm9obkRvZSIsImlhdCI6MTczNjAwNTIzNiwiZXhwIjoxNzM2MDA1Mjk2fQ.aSk3-6I06_6cVnpvEEfIYdmBEQMocx7KEWsam251giI

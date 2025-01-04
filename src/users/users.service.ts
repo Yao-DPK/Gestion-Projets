@@ -41,6 +41,10 @@ export class UsersService {
   async getbyId(id: number): Promise<User> {
     return this.repository.findOne({ where: { id: Equal(id) } });
   }
+  
+  async getbyEmail(email: string): Promise<User> {
+    return this.repository.findOne({ where: { email: Equal(email) } });
+  }
 
   async updatebyId(
     id: number,
